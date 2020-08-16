@@ -428,7 +428,7 @@ TfLiteStatus )"
     } else {
       opName = tflite::EnumNameBuiltinOperator(registrations_[i].code);
     }
-    wr << "  registrations[OP_" << opName << "] = tflite::ops::micro::Register_"
+    wr << "  registrations[OP_" << opName << "] = &tflite::ops::micro::Register_"
        << opName << "();\n";
   }
   wr << "\n";
